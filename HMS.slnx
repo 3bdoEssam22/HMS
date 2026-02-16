@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="HMS.Api/HMS.Api.csproj" />
+  <Project Path="HMS.Core/HMS.Core.csproj" />
+  <Project Path="HMS.Infrastructure/HMS.Infrastructure.csproj" />
+  <Project Path="Hms.Services.Abstraction/Hms.Services.Abstraction.csproj" />
+  <Project Path="HMS.Services/HMS.Services.csproj" />
+  <Project Path="HMS.Shared/HMS.Shared.csproj" />
+</Solution>
