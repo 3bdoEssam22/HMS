@@ -33,8 +33,6 @@ namespace HMS.Api
             builder.Services.AddAutoMapper(typeof(ServicesAssemblyReference).Assembly);
             builder.Services.AddTransient<IAttachmentService, AttachmentService>();
 
-
-
             #endregion            
 
             var app = builder.Build();
