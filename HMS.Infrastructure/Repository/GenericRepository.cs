@@ -19,12 +19,22 @@ namespace HMS.Infrastructure.Repository
         public async Task<IEnumerable<TEntity>> GetAllAsync(
                 Expression<Func<TEntity, bool>>? filter = null,
                 Expression<Func<TEntity, object>>? orderByExp = null,
-                Expression<Func<TEntity, object>>? orderByDescExp = null)
+                Expression<Func<TEntity, object>>? orderByDescExp = null,
+        List<Expression<Func<TEntity, object>>>? includes = null
+         )
         {
             var query = _dbContext.Set<TEntity>().AsQueryable();
 
             if (filter != null)
                 query = query.Where(filter);
+
+            if (includes is not null)
+            {
+                foreach (var item in includes)
+                {
+                    query = query.Include(item);
+                }
+            }
 
             if (orderByExp != null)
                 query = query.OrderBy(orderByExp);

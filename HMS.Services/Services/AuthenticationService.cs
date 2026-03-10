@@ -61,7 +61,7 @@ namespace HMS.Services.Services
                     Body = "A welcome message from HotelSystem Support, Login and enjoy our Hotel Services."
                 };
 
-                await _emailService.SendEmail(email);
+                await _emailService.SendEmailAsync(email);
 
                 await _userManager.AddToRoleAsync(user, "Guest");
                 genericResponse.StatusCode = StatusCodes.Status200OK;

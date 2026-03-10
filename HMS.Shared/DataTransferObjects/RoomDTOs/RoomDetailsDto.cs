@@ -1,4 +1,4 @@
-﻿namespace HMS.Shared.DataTransferObjects
+﻿namespace HMS.Shared.DataTransferObjects.RoomDTOs
 {
     public class RoomDetailsDto
     {
