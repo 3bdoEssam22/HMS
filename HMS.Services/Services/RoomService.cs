@@ -3,7 +3,7 @@ using Hms.Services.Abstraction;
 using HMS.Core;
 using HMS.Core.Contracts;
 using HMS.Core.Entities.RoomModule;
-using HMS.Shared.DataTransferObjects;
+using HMS.Shared.DataTransferObjects.RoomDTOs;
 using HMS.Shared.QueryParameters;
 using HMS.Shared.Respones;
 using Microsoft.AspNetCore.Http;
@@ -220,10 +220,7 @@ namespace HMS.Services.Services
             return genericResponse;
         }
 
-        public async Task<GenericResponse<IEnumerable<RoomDTO>>> GetAllRoomsForGuestAsync(
-            string? roomType,
-            string? sort
-            )
+        public async Task<GenericResponse<IEnumerable<RoomDTO>>> GetAllRoomsForGuestAsync(string? roomType, string? sort)
         {
             var genericResponse = new GenericResponse<IEnumerable<RoomDTO>>();
 

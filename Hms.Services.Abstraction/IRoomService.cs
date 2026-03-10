@@ -1,4 +1,4 @@
-﻿using HMS.Shared.DataTransferObjects;
+﻿using HMS.Shared.DataTransferObjects.RoomDTOs;
 using HMS.Shared.QueryParameters;
 using HMS.Shared.Respones;
 using Microsoft.AspNetCore.Http;

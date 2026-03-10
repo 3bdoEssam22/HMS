@@ -1,4 +1,5 @@
-﻿using HMS.Core.Entities.SecurityModule;
+﻿using HMS.Core.Entities.BookingModule;
+using HMS.Core.Entities.SecurityModule;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -16,12 +17,14 @@ namespace HMS.Infrastructure.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<HotelUser>().ToTable("Users");
             modelBuilder.Entity<IdentityRole>().ToTable("Roles");
             modelBuilder.Entity<StaffUser>().ToTable("StaffUser");
+
+            modelBuilder.Entity<Booking>().Property(b => b.TotalAmount).HasPrecision(8, 2);
+
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
-
-
     }
 }

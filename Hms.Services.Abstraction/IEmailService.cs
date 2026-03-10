@@ -4,6 +4,6 @@ namespace Hms.Services.Abstraction
 {
     public interface IEmailService
     {
-        Task SendEmail(Email email);
+        Task SendEmailAsync(Email email);
     }
 }

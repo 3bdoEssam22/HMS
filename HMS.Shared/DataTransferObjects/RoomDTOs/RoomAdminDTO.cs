@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HMS.Shared.DataTransferObjects
+namespace HMS.Shared.DataTransferObjects.RoomDTOs
 {
     public class RoomAdminDTO : RoomDTO
     {

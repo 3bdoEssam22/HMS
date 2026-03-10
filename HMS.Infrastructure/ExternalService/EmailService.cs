@@ -14,7 +14,7 @@ namespace HMS.Infrastructure.ExternalService
 {
     public class EmailService(IOptions<EmailSettings> _options) : IEmailService
     {
-        public async Task SendEmail(Email email)
+        public async Task SendEmailAsync(Email email)
         {
             //Combine message
             var mail = new MimeMessage()

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using HMS.Core.Entities.RoomModule;
-using HMS.Shared.DataTransferObjects;
+using HMS.Shared.DataTransferObjects.RoomDTOs;
 
 namespace HMS.Services.Profiles
 {

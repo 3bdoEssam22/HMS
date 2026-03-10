@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using HMS.Core.Entities.RoomModule;
-using HMS.Shared.DataTransferObjects;
+using HMS.Shared.DataTransferObjects.RoomDTOs;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
