@@ -1,0 +1,14 @@
+﻿using HMS.Shared.Respones;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hms.Services.Abstraction
+{
+    public interface IPaymentService
+    {
+        Task<GenericResponse<string>> CreatePaymentUrlAsync(Guid bookingId);
+    }
+}

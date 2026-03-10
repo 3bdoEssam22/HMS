@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HMS.Core.Entities
+namespace HMS.Shared.DataTransferObjects.RoomDTOs
 {
-    public abstract class BaseEntity<TKey>
+    public class RoomAdminDTO : RoomDTO
     {
-        public TKey Id { get; set; } = default!;
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
-
     }
 }

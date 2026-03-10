@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.15.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.24" />
+    <PackageReference Include="MimeKit" Version="4.15.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HMS.Services\HMS.Services.csproj" />
   </ItemGroup>
 
