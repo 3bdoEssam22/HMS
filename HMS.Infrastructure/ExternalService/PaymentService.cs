@@ -57,9 +57,9 @@ namespace HMS.Infrastructure.ExternalService
             }
 
             booking.PayMobPaymentKey = paymentKey;
-            booking.UpdatedAt = DateTime.Now;
+            booking.UpdatedAt = DateTime.UtcNow;
             booking.Status = BookingStatus.Paid;
-            booking.PaidDate = DateTime.Now;
+            booking.PaidDate = DateTime.UtcNow;
 
 
             _unitOfWork.GetRepository<Booking, Guid>().Update(booking);
@@ -70,7 +70,7 @@ namespace HMS.Infrastructure.ExternalService
             {
                 genericResponse.StatusCode = StatusCodes.Status200OK;
                 genericResponse.Message = "Payment URL created successfully!";
-                genericResponse.Data = $"{_configuration["PayMob:BaseUrl"]}/acceptance/iframes/{_configuration["BaseUrl:IFrameId"]}?payment_token={paymentKey}";
+                genericResponse.Data = $"{_configuration["PayMob:BaseUrl"]}/acceptance/iframes/{_configuration["PayMob:IFrameId"]}?payment_token={paymentKey}";
 
             }
             else
@@ -127,7 +127,7 @@ namespace HMS.Infrastructure.ExternalService
                     {
                         email,
                         first_name = fullName.Split(' ')[0],
-                        last_name = fullName.Split(' ')[1],
+                        last_name = fullName.Split(' ').Length > 1 ? fullName.Split(' ')[1] : "N/A",
                         phone_number = phone,
                         apartment = "NA",
                         floor = "NA",

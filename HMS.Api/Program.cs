@@ -76,8 +76,6 @@ namespace HMS.Api
 
             builder.Services.AddHttpClient<IPaymentService, PaymentService>();
 
-            builder.Services.AddScoped<IPaymentService, PaymentService>();
-
             #endregion            
 
             var app = builder.Build();
