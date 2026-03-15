@@ -152,7 +152,7 @@ namespace HMS.Services.Services
             if (!isParsed)
             {
                 genericRespone.StatusCode = StatusCodes.Status400BadRequest;
-                genericRespone.Message = "Invalid staff speciality.";
+                genericRespone.Message = "Invalid staff specialty.";
                 return genericRespone;
             }
 
